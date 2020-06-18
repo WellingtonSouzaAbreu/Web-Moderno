@@ -12,6 +12,7 @@ console.log('a = ', a)
 a = 2   //Var a foi declarada antes de tudo, porém não foi atribuido valor
 console.log('a = ', a) */
 
+
 console.log('b = ', b)
 var a = 2   //Let não efetiva hoisting
 console.log('b = ', b)

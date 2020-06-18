@@ -10,7 +10,7 @@ function imprimirNomeGritado(obj){
     try{
         console.log(obj.name.toUpperCase() + '!!!') // Erro: o UpperCase não funciona em variável undefined
     }catch(e){
-        //console.log(e) // Imprime vária informações sobre o erro
+        //console.log(e) // Imprime várias informações sobre o erro
         tratarErroELancar(e)
     }finally{ // Executa independente se der erro ou não
         console.log('G')
