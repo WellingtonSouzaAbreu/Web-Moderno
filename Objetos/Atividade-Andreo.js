@@ -5,26 +5,26 @@ class Calculator{
         this.valor2 = valor2
     }
 
-    somar(valor1, valor2){
-        console.log(valor1 + valor2) 
+    somar(){
+        console.log(this.valor1 + this.valor2) 
     }
-    subtrair(valor1, valor2){
-        console.log(valor1- valor2) 
+    subtrair(){
+        console.log(this.valor1- this.valor2) 
     }
-    multiplicar(valor1, valor2){
-        console.log(valor1 * valor2) 
+    multiplicar(){
+        console.log(this.valor1 * this.valor2) 
     }
-    dividir(valor1, valor2){
-        console.log(valor1 / valor2) 
+    dividir(){
+        console.log(this.valor1 / this.valor2) 
     }
 }
 
-let calculadora = new Calculator()
+let calculo = new Calculator(10,5)
 
-calculadora.somar(10,5)
-calculadora.subtrair(10,5)
-calculadora.multiplicar(10,5)
-calculadora.dividir(10, 5)
+calculo.somar()
+calculo.subtrair()
+calculo.multiplicar()
+calculo.dividir()
 
 
 
