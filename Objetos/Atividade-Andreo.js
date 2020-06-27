@@ -9,7 +9,7 @@ class Calculator{
         console.log(this.valor1 + this.valor2) 
     }
     subtrair(){
-        console.log(this.valor1- this.valor2) 
+        console.log(this.valor1 - this.valor2) 
     }
     multiplicar(){
         console.log(this.valor1 * this.valor2) 
@@ -25,6 +25,8 @@ calculo.somar()
 calculo.subtrair()
 calculo.multiplicar()
 calculo.dividir()
+
+
 
 
 

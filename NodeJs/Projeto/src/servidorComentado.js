@@ -26,16 +26,15 @@ const app = express()
 
 
 // http://localhost:3003/produtos //Produtos do método get
-app.get('/produtos', (req, res, next) => { 
-    res.send({nome: 'Notebook', preco: 123.45})  //Send envia res como resposta e já converte para JSON
+app.get('/produtos', (req, res, next) => {
+    res.send({ nome: 'Notebook', preco: 123.45 }) //Send envia res como resposta e já converte para JSON
 })
 
 // res é a resposta dada a solicitaão do site
 app.use((req, res, next) => { // Use responde a todos os tipos de requisição
-    res.send('Requisição inválida')  //Send envia res como resposta e já converte para JSON
+    res.send('Requisição inválida') //Send envia res como resposta e já converte para JSON
 })
 
-app.listen(porta, () =>{
-    console.log('Servidor executando na porta', + porta)
-}) //porta escutada
-
+app.listen(porta, () => {
+        console.log('Servidor executando na porta: ', +porta)
+    }) //porta escutada
