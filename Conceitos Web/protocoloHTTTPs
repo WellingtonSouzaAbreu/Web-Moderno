@@ -1,0 +1,16 @@
+// Protocolo seguro
+// Utiliza criptografia
+
+// Certificado <> Protocolo
+// "Certificado TLS/SSL" // Erro
+// "Certificados usados com TLS/SSL"
+
+// Caracteristicas
+// Dados criptografados pelos protocolos TLS ou SSL
+// Protege contra interceptaão (Man in the Midle - MITM)
+// Criptografa todas as informações: URL, cookies, headers
+// Usa certificados digitais
+
+// CA e lets script gera certificados para gerar certifidos de maneira gratuita
+// Certificados ajudam na validação de Dados
+// Certificados devem ser instalados nos dois sides para que não haja erros de validação

@@ -1,0 +1,18 @@
+// É um padrão que permite a usabilidade entre linguagens, geralmente comunicação textual
+// É um serviço web
+
+// Web service é dividiro entre:
+    * SOAP(Simple Object Acess Protocol) - Mais antigo
+        - Baseado em XML e burocrático, permite acesso as funções do web service
+    * REST(Representational State Transfer), JSON, HTTP, Simples. 
+        - Restfull é quem atende os padrões do REST
+        - Restfull trabalha com métodos
+
+
+// Arquitetura SOA
+    * Serviços funcionam dentro do barramento
+    * Comportam web services SOAP e REST
+
+// Micro services
+    * Serviços especializados para tarefas específicas
+    * Flexbilidade para implementar várias tecnologias

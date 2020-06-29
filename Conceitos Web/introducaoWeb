@@ -1,0 +1,18 @@
+// LAN geralmente usam redes centralizadas
+// A web usar rede distribuida
+
+// TCP/IP é a base da internet - Confiável
+// UDP/IP não é confiável, dados podem ser perdidos
+
+// Modelo TCP/IP - Padrão layer - dividir software maior cada um com sua responsabilidade
+* Aplicação (HTTP, FTP,SMTP, Comunicação processo a processo, portas)
+* Transporte (TCP, UDP, Comunicação host a host, confiabilidade, integridade)
+* Internet (IP, Conexão entre redes, Transferências entre pacotes)
+* Rede/Física (Wifi, MacAndress, Ethernet)
+
+// Na Comunicação os processos são mapeados pelas portas
+
+
+
+
+

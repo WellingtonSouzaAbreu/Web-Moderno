@@ -1,0 +1,9 @@
+// HTTP - Hyper Text Transfer Protocol
+//  Hyper Text(Textos linkados)
+
+// HTTP é stateless - Não tem estado, não armazena nada, toda conexão é como se fosse a primeira
+// HTTP opera em cima da pilha TCP/IP
+
+//Get = URL + Parâmetros
+
+// HTTPS é seguro

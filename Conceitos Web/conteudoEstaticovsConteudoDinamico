@@ -1,0 +1,9 @@
+// Server-side
+    * Conteudo estático pega arquivos fisicos e gera Conteudo
+    * Conteudo dinâmico é gerado a partir de um código(ex: queries, consultas, serviços do server)
+
+// O conceito de estático e dinâmico é relativo, 
+// depende do ponto de vista server-side/client-side
+
+// Conteudo estático é mais performático dependendo do número de consultas e acessos
+// 

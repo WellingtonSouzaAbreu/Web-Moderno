@@ -1,0 +1,13 @@
+// Traduzem nomes de dominios para endereço de IP
+
+// www.coder.com.br => 192.168.2.2
+
+// DNS funciona sobre o protocolo UDP
+// Porta 53
+
+// DNS Records
+    * A - IPV4
+    * AAAA - IPV6
+    * MX - Servidor de Email
+    * NS - Servidor de DNS
+    * CNAME - Canonical Name(Apelido)

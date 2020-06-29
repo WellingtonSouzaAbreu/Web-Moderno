@@ -1,0 +1,26 @@
+//Evoluçao das arquiteturas
+
+// 1º Era: Mainframes
+// Vários terminais utilizados apenas para entrada de dados, o Mainframe realizava o resto
+// Uma atualização pode ser feita apenas no servidor
+
+
+// 2º client-server - Era de sucesso do Delphi
+// A aplicação desktop era rico, ele mesmo processava regras de negócio e tratamentos
+// deixando o servidor na maioria das vezes apenas para armanezamento de dados
+//  Atualização deve ser feita aplicação à aplicação
+
+// 3º Web
+// server-side
+    * Conteudo gerado pelo servidor
+    * Atualização do servidor(volta-se a idéia do mainframe)
+
+// Front-end + services
+    * Aplicação rica como na era do Delphi
+    * Ascenção do JS
+    * SPA(Single Page Aplication) - Toda a parte visual é gerada dinâmicamente após o servidor ter gerado uma única página, usando o servidor apenas para WebServices(consulta de dados)
+
+
+
+    
+

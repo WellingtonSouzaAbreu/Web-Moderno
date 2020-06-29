@@ -1,0 +1,11 @@
+// A conexão entre cliente/servidor precisa passar pelo DNS
+// Configurar um DNS pode demorar de 24h à 48h para ser atualizado no mundo todo
+
+// Web Stack
+    SO, WebServer, DB, Linguagem
+    LAMP - linux, Apache, Mysql, PHP
+
+// CNDs são usados para o desbalanceamento de carga
+
+
+
