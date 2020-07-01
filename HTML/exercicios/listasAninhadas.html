@@ -1,0 +1,32 @@
+<ul>
+    <li>
+        <span wm-folder>back-end</span> 
+        <ul>
+            <li>
+                <span wm-folder>app</span>
+                <ul>
+                    <li>Serverjs</li>
+                    <li>Banco de dados</li>
+                    <li>Jogatina</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(folder =>{
+        folder.onclick = function(e){  
+            const ul = folder.nextElementSibling /* Pega o próximo elemento na arvore */
+            const d = ul.style.display
+            ul.style.display = d === 'none' ? 'block' : 'none'
+        }
+    })
+    
+</script>
+
+<style>
+    .list{
+        cursor: pointer;
+    }
+</style>

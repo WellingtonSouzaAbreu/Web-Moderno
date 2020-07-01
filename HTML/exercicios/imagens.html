@@ -1,0 +1,106 @@
+<!-- Desafio Slider -->
+
+<div wm-slider>
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da Cidade" width="513" height="342"
+            title="Muro da Cidade por Tarson Bessa"> <!-- Usado pelos leitores e quando a imagem não é carregada -->
+    </p>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Intro Cod3r" height="342">
+    </p>
+
+    <p class="texto">
+        <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Avatar" height="50" align="left">
+        <!-- Alinha a imagem a esquerda -->
+        text gdrt dg dfgdfg dfg dfgdfg dfg dfgdfg dfgdfg dfg fdg
+        dfg dfg dfg dfg dfgdfgdfgd fg dfg dfg fd fd sdfsdfsd ddff
+        g dfg dfg dfgd fg dfgd fg dfg df gdf gdfg dfgfdgdfgdfgdf
+        dfg fgdf dfg dfg dfgdfgfgfgfgdf gdfsdfffffffsdfdfdf df
+        fd gdfg df dfgdfg dfgdf gdfgdfgdfgdgdfgdfgdgdfgdfgfdg dfdf
+    </p>
+
+
+
+    <p class="circular">
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" height="342">
+    </p>
+
+    <p class="cidade"></p>
+
+    <p>
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width: 600px)">
+            <!-- Criterio de apresentação da primeira imagem -->
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+        </picture>
+    </p>
+
+</div>
+<style>
+    input {
+        margin-top: 452px;
+    }
+
+    p {
+        position: absolute;
+        /* display: none; */
+        left: -625px;
+    }
+
+    .circular {
+        background-color: #444;
+        width: 513px;
+    }
+
+    .texto {
+        width: 400px;
+    }
+
+    .texto img {
+        margin-right: 12px;
+    }
+
+    .cidade {
+        width: 513px;
+        height: 342px;
+        background-image: url("http://files.cod3r.com.br/curso-web/imagem4.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+</style>
+
+<script>
+/* document.querySelector('[wm-slider] > p')  //Pega o próximo elemento p dentro de wm-slider*/
+/* document.querySelectorAll('[wm-slider] > p')  //Pega todos elementos p dentro de wm-slider*/
+
+    function mover(posInicial, passo) {
+        let lista = document.querySelectorAll('p')
+        let i = 0
+        lista.forEach(paragrafo => {
+            paragrafo.style.left = posInicial + 'px'
+        })
+
+        setInterval(function callbackM( ) {
+            lista[i].style.display = 'block'
+
+            let [posAtual] = (lista[i].style.left).split('p', 1)
+            posAtual = Number.parseInt(posAtual) + passo
+            lista[i].style.left = posAtual + 'px'
+
+            if (posAtual > innerWidth) {
+                lista[i].style.display = 'none'
+                i++
+                if (i == 6) {
+                    i = 0
+                    lista.forEach(paragrafo => {
+                        paragrafo.style.left = posInicial
+                    })
+                }
+            }
+        }, 20)
+    }
+
+    mover(-625, 30)
+</script>

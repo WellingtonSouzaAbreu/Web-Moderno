@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <header>Exercicios</header>
+    <br>
+    <nav>
+        <a href="./exercicios/teste.html"> 00 - Teste </a><br>
+        <a href="./exercicios/textos1.html"> 01 - Textos 1 </a><br>
+        <a href="./exercicios/listasAninhadas.html"> 02 - Listas Aninhadas </a><br>
+        <a href="./exercicios/links.html"> 03 - Links </a><br>
+        <a href="./exercicios/tabela.html"> 04 - Tabela </a><br>
+        <a href="./exercicios/form/form.html"> 05 - Formulário </a><br>
+        <a href="./exercicios/imagens.html"> 06 - Imagens </a><br>
+        <a href="./exercicios/video.html"> 07 - Videos </a><br>
+        <a href="./exercicios/tagsNaoVisuais.html"> 08 - Tags não visuais </a><br>
+    </nav>
+    <section id="conteudo">
+            <!-- Conteudo de cada aula -->
+    </section>
+    <br>
+    <footer>Curso de Web Moderno</footer>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.onclick = function(event){
+                event.preventDefault()  // event é do mouse // preventDefault() impede o comportamento padão
+                /* Requisição ajax feita pelo index */
+                const conteudo = document.getElementById('conteudo')
+                fetch(link.href)  // fetch(recurso recente) realiza requisições ajax sem necessitar de bibliotecas como jQuery
+                    .then(resp => resp.text()) //resp.text pega o conteudo da página html 
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>
