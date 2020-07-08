@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
-    </style>
+        body{
+            background-color: aquamarine;
+        }
+    </style> <!-- Estilos são aplicados por ordem de precedência das chamadas -->
+    <link rel="stylesheet" href="./css/externo.css"> <!-- rel = relação -->
 </head>
 
-<body>
+<body style="background-color: coral;"> <!-- Nível de preferência superior a todos -->
+    <!-- Propriedades inline é utilizável somente para teste. Utilizar somente via código JS, não direto no html -->
     <h1>E agora?</h1>
 </body>
 

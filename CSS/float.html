@@ -11,18 +11,27 @@
 
         .c1 {
             background-color: red;
+            float: right; /* O c1 foi o primeiro a ser aplicado, por isso ele fica mais a direita */
         }
 
         .c2 {
             background-color: green;
+            clear: right; /* Faz com que o elemento respeite o espaço da div anterior */
         }
         
         .c3 {
             background-color: blue;
+            float: right;
         }
 
         .c4 {
             background-color: orange;
+            clear: right;
+        }
+
+        div{ /* Clear: both limpa o float esquerdo e direito */
+            height: 150px;
+            width: 150px;
         }
     </style>
 </head>

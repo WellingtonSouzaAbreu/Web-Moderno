@@ -5,7 +5,27 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        body{
+            font-size: 40px;
+            color: white;
+            background-color: coral;
+        }
+
+        ul{ padding: 0px;}
+        div{background-color: seagreen;}
+        span{background-color: dodgerblue;}
+        li{background-color: purple;}
+
+        div, span, li{
+            width: 30%;
+            width: 200px;
+            height: 80px; /* Até aqui o span ignorou tudo */
+            padding-top: 10px;
+            text-align: center;
+            /* display: block; */ /* Cada um ocupa sua própria linha individual */
+            /* display: inline; */
+            display: inline-block; /* Comportamento estranho */
+        }
     </style>
 </head>
 

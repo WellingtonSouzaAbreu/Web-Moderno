@@ -6,14 +6,14 @@
     <title>CSS Grid #01</title>
     <style>
         /* https://caniuse.com/#feat=css-grid */
-        
+
         html,
         body {
             margin: 20px;
             height: calc(100% - 40px);
             background-color: lightgray;
         }
-        
+
         div {
             display: flex;
             align-items: center;
@@ -21,6 +21,56 @@
             font-size: 30px;
             border: solid 5px dodgerblue;
             background: #fff;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+            /* Cria 12 colunas, cada uma com 8.33% do tamanho */
+            grid-template-columns: repeat(4, 8.33%);
+            /* Cria 4 colunas, cada uma com 8.33% do tamanho */
+            grid-template-columns: repeat(11, 100px) 200px;
+            /* 11 colunas de 100px + uma coluna de 200px */
+            /* minmax(100px, 300px) */
+            grid-template-columns: 200px 20% 1fr;
+            /* 3 colunas. Uma de valor absoluto, outra porcentagem e 0 1fr pega o fragmento restante */
+            grid-template-columns: 3fr 6fr 3fr;
+            /* fr é fracionário, 3 dozeavos, 6 dozeavos e 3 dozeavos */
+
+            /* grid-template-rows: 50% 25% 12.25% 12.25%; */
+            grid-template-rows: 100px 1fr;
+            /* O restante não informado usa apenas o valor necessário para renderizar ou o valor restante e divide */
+            grid-template-rows: 100px auto;
+            /* o primeiro tem 100px e o restante é dividido igualmente */
+        }
+
+        /* Firefox trabalha com grid de uma maneira interresante */
+        .d8 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-column-end: span 2;
+            /* Span de 2 é o mesmo que usar duas células do grid */
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-row-end: span 2;
+            /* Mais compreenssível */
+        }
+
+        .d10, .d11 {
+            /* Podem se sobrepor */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        .d10{
+            z-index: 10;/* Profundidade dos elementos */
+        }
+
+        .d11{
+            z-index: 9;
         }
     </style>
 </head>

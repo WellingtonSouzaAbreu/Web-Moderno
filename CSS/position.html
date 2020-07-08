@@ -5,7 +5,61 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div{
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static{ /* Padrão */
+            position: static;
+            top: 100px;
+            left: 100px;
+            background-color: red;
+        }
+
+        .fixed{
+            position: fixed; /* Adquire posição relativa a partir do viewport */
+            bottom: 30px;
+            right: 0px;
+            background-color: hotpink;
+        }
+
+        .relative1{ /* Top e left a partir do elemento anterior */
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background: lawngreen;
+        }
+
+        .absolute1{ /* Adquire posição relativa a partir do viewport */
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: lightseagreen;
+        }
+
+        .relative2{
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            padding: 0px;
+        }
+
+        .absolute2{   /* Se o pai for relative o absolute toma o pai como regerência */
+            position: absolute;  /* Se o pai não for relative, toma-se a referência no viewport */
+            background-color: white;
+        }   
+
+        .sticky{ /* Segue o layout a partir do valor de top */
+            position: sticky;
+            background-color: slateblue;
+            top: 22px;
+
+        }
     </style>
 </head>
 

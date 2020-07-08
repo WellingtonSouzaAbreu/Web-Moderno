@@ -51,11 +51,40 @@
             background: #f50a31;
             color: #fff;
         }
+
+        .menu a:hover, .menu a.selected{
+            background-color: #4faddb;
+            color: black;
+        }
+
+        
         /* ==================== */
         /* Solução com Flex Box */
         /* ==================== */
+
+         .cabecalho{
+            height: 80px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu{
+            flex-grow: 10;
+        }
+
+        .menu ul{
+            display: flex; 
+        }
+
+        .menu li{
+            margin: 0px 10px;
+        }
     </style>
 </head>
+
+
 
 <body>
     <header class="cabecalho">
@@ -85,6 +114,18 @@
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>
     </header>
+    <script>
+        window.onhashchange = function(e){
+            const oldURL =  e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+
+            const oldItem = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newItem = document.querySelector(`.menu a[href='#${newURL}']`)
+
+            oldItem && oldItem.classList.remove('selected')
+            newItem && newItem.classList.add('selected')
+        }
+    </script>
 </body>
 
 </html>

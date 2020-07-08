@@ -4,9 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS Grid #03</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="./tag.css">
     <style>
-        /* ... */
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        header{
+            grid-area: cabecalho;
+        }
+
+        nav{
+            grid-area: navegacao;
+        }
+
+        main{
+            grid-area: conteudo;
+        }
+
+        footer{
+            grid-area: rodape;
+        }
+
+        body{
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 1fr 300px ; /* #300px do nav */
+            grid-template-rows: 100px 1fr 100px; /* Header, conteudo, rodape */
+            grid-template-areas: 
+                'cabecalho cabecalho'
+                'conteudo navegacao'
+                'rodape rodape';
+            grid-gap: 5px 5px;
+        }
+
+        @media( max-width: 700px){
+            body{
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 1fr 100px;
+                grid-template-areas: 
+                    'navegacao'
+                    'conteudo'
+                    'rodape';
+            }
+
+            header{display:none;}
+        }
     </style>
 </head>
 

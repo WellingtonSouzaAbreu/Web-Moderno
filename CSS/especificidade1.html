@@ -6,6 +6,25 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+        /* 
+            Em linhas gerais...
+            Ordem de especificidade - nivel especifico
+            1. regra com !important
+            2. seletores mais específicos
+            3. última regra tem mais prioridade em caso de empate
+        */
+        p{
+            background-color: gray; /* Menos específico */
+        }
+
+        .observacao {
+            background-color: rgb(29, 25, 25); /* Especifidade mediana */
+        }
+
+        p.observacao{ /* Especifidade maior */
+            background: linear-gradient(to right, red, yellow);
+        }
     </style>
 </head>
 

@@ -16,6 +16,62 @@
             flex-direction: column;
             align-items: center;
         }
+
+        div {
+            font-size: 32px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+        p {
+            /* Valoes padrões */
+            font-size: 1em;
+            font-size: 16px;
+            font-size: 100%;
+            font-size: 12pt;
+
+            /* fontes relativas */
+            font-size: 2.2rem;
+            /* REM busca referencia na raiz, no valor padrão do navegador{html} */
+            font-size: 2.2em;
+            /* Busca referencia no elemento pai */
+            font-size: 10vw;
+            font-size: 5vw;
+            /* Serif = Pontas nas letras/ Sans-serig = Sem pontas/ Cursive = Mais parecido com a escrita */
+            font-family: monospace;
+            font-family: 'Indie Flower', cursive;
+
+            font-weight: 900;
+            /* Peso da font */
+            font-style: italic;
+            text-transform: capitalize;
+            /* text-decoration: underline overline line-through; */
+            word-spacing: 10px;
+            /* Espaço entre as palavras */
+            letter-spacing: 10px;
+            /* Espaço entre letras */
+            line-height: 2.5em;
+            /* Altura da linha */
+            text-align: left;
+            /* Left é o padrão */
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque {
+            color: white;
+            background-color: grey;
+            box-shadow: 2px 2px 1px black;
+        }
+
+        .destaque:active{ /* Quando o link está ativo, quando há clique */
+            box-shadow: none;
+        }
     </style>
 </head>
 
