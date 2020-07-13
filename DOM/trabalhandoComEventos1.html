@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a href="https://google.com.br" espera-um-pouco onclick="navegarEm5s(event)">Google</a>
+         <!-- Vantagem e desvantagem de evento dentro da tag: Esplícito e de fácil entendimento. Porém muito código dentro do HTML -->
+    </div>  
+    <script>
+        function navegarEm5s(event){
+            console.log('Alvo' + event.target) // Event.target é o elemento que disparou o evento
+            
+            event.preventDefault() /* Impredir o comportamento padrão */
+            console.log('Saindo em 5s....')
+            setTimeout(() => {
+                window.location.href = event.target.href // window.location.href = substitui o endereço na barra superior do browser/
+            },5000)
+        }
+
+        /* const a = document.querySelector('a')
+        a.onclick = navegarEm5s  */// Diminui o texto dentro do HTML, porém fica muito escondido e de difícil entendimento
+
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s // O atributo personalizado deixa visual que há um comportamento usado pelo JS
+
+    </script>
+</body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+        const body = document.querySelector('body')
+
+        const div1 = document.createElement('div')
+        div1.classList.add('destaque')
+        div1.innerHTML = 'Primeiro'
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor')
+        div2.innerHTML = 'Segundo'
+
+        const p  = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        const div3 = document.createElement('div')
+        div3.appendChild(p) /* PAi recebe filho */
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        const texto = document.createTextNode('Antes...') /* Text avulso */
+        div3.insertBefore(texto, div3.childNodes[0])
+        /* Pai.InserirDepois(elementoFilho, posicaoDoFilho)*/
+
+        const div4 = div3.cloneNode(true) // Clonar elemento // True = clonagem profunda(clona filhos), false = clonagem superficial
+        body.appendChild(div4)
+        body.removeChild(div1)
+
+        console.log(div1.hasChildNodes())
+    </script>
+</body>
+
+</html>

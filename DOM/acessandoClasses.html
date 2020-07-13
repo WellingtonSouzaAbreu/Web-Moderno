@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Classes</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+<style>
+    .teste{color: pink;}
+</style>
+
+<body class='conteudo exercicio'>
+    <div>
+        Classes
+    </div>
+    <script>
+        const classes = document.querySelector('div').classList // Classlist pode ser percorrido por um forEach()
+        /* Array.from(classes) Formas de transformar o classList em array
+        classes = [...classes]  */
+        classes.add('destaque')
+        classes.remove('destaque')
+        classes.toggle('destaque') /* Alterna, se não tiver adiciona, se tiver remove */
+        console.log(classes.contains('destaque'))
+        console.log(classes.length)
+        classes.toggle('destaque')
+        console.log(classes.length)
+
+        classes.add('teste')
+        // classes.toggle('teste')
+        for(let c of classes){
+            console.log(c)
+        }
+
+        document.querySelector('div').onclick = event => {
+            classes.toggle('destaque')
+        }
+    </script>
+</body>
+
+</html>

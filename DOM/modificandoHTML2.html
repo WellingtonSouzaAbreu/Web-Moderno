@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <script>
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alternado' // Tudo dentro da div é substituido
+        // div.outerHTML = 'Texto Alternado' // Substitui até mesmo a div
+        div.insertAdjacentHTML('beforebegin', '<p>beforebegin</p>') // Insere antes da propria div
+        div.insertAdjacentHTML('afterbegin', '<p>afterbegin</p>') // Insere depois do inicio do bloco div
+        div.insertAdjacentHTML('beforeend', '<p>beforeend</p>') // Insere depois do inicio do bloco div
+        div.insertAdjacentHTML('afterend', '<p>afterend</p>') // Insere depois do inicio do bloco div
+
+        console.log(div.innerHTML)
+        console.log(div.innerText)
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib="123">.terceiro .ultimo</span></div>
+    <script>              
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        const selecionar = seletor => {
+            document.querySelectorAll(seletor).forEach(elemento => { /* Retorna um NodeList */
+                elemento.classList.add('destaque')                  /* NodeList tem o forEach mas não as outras funçções de um array */
+            })
+        }
+
+        const deselecionar = seletor => {
+            document.querySelectorAll(seletor).forEach( elemento => { /* Retorna um NodeList */
+                elemento.classList.remove('destaque')
+            })
+        }
+        /* Site 'can i use' - mostra o suporte de tecnologias nos navegadores */
+        selecionar('div')
+        deselecionar('*')
+
+        selecionar('.terceiro.ultimo')
+        deselecionar('*')
+
+        selecionar(':not(#primeiro)') /* Todos  que não são o primeiro. exceção */
+        deselecionar('*')
+
+        selecionar(':nth-child(1)') /* Todos os primeiros filhos */
+        deselecionar('*')
+
+        selecionar('div:nth-of-type(1)') /* Primeiro elemento do tipo div */
+        deselecionar('*')
+
+        selecionar('[wb-attrib="123"]')
+    </script> 
+</body>
+</html>
