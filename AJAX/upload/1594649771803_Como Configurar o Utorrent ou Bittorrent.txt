@@ -1,0 +1,20 @@
+01: Primeiramente você precisa ter o uTorrent ou Bittorrent instalado
+
+02: Na janela principal do Utorrent abra “Preferências”, no menu “Opções” – ou pressione o atalho “Ctrl + P”. É nessa tela que a maioria dos ajustes são feitos:
+
+03: Na guia controle de banda, defina a “Taxa máxima de upload” (em kB/s). Deixe sua taxa de upload em 0  (Ilimitado) assim você estará nos ajudando, e estará sendo ajudado por outros usuários. Em "número máximo de conexões" defina 450, em "número de peers conectados por torrent" defina 200 e em "Número De Slots para upload por torrent" defina 6. Isso fará com que o seu PC se conecte com mais "Seeds" assim garantindo mais velocidade
+
+04: Abra a guia “BitTorrent”. Nela, selecione “Forçado” em “Protocolo de Criptografia” e marque “Permitir conexões não criptografadas”. Dessa forma, o uTorrent impedirá que sua operadora de Internet saiba que você está usando a conexão para baixar um arquivo via torrent, já que a velocidade de download para o protocolo torrent é propositalmente limitada por algumas operadoras.
+
+05: Na guia “Conexão”, marque a opção “Liberar no Firewall do Windows”. Isso faz com que o uTorrent adicione o programa às excessões, evitando que o download seja confundido com vírus e bloqueado pelo firewall. Em seguida, clique em “OK” para salvar as alterações; 
+
+
+06: Clique com o botão direito do mouse sobre seus downloads. Mova o mouse até “Alocação de Banda” e marque “Alta”. Faça isso para todos os seus downloads;
+
+
+07: Lembre-se de ao fim do download deixar o arquivo "SEMEANDO" ou "ENVIANDO", assim o download de outros usuários será mais rápido e todo mundo ficará contente, isso não prejudicará os seus próximos downloads...
+
+
+08: Vale lembrar que isso não fará milagres, torrents recém postados aqui no site (ou com poucos seeds)  serão lentos mesmo,  e comentar " Seeds Pf " também não dá seeds, o negócio eh SEMEAR, para que todos tenham uma boa velocidade de download e para que o download continue ativo! 
+
+Tutorial com imagens: http://www.thepiratefilmes.com/2013/07/tutorial-de-configuracao-do-utorrent-331.html

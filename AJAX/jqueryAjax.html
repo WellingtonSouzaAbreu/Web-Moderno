@@ -13,7 +13,38 @@
     <div id="get"></div>
     <div id="post"></div>
 
-    <script>
-        // ...
+    <script> // Jquery é uma biblioteca complementar não nativa
+        function exibirResultado(id, dados){
+            const texto = JSON.stringify(dados)
+            document.getElementById(id).innerHTML = texto 
+        }
+
+        $.ajax({
+            url: 'parOuImpar',
+            data: {
+                numero: 2
+            },
+            success(data){
+                exibirResultado('get', data)
+            },
+            error(e){
+                exibirResultado('get', e)
+            }
+        })
+
+        $.ajax({
+            url: 'formulario',
+            method: 'post',
+            data: {
+                nome: 'João',
+                sobrenome: 'silva'
+            },
+            success(data){
+                exibirResultado('post', data)
+            },
+            error(e){
+                exibirResultado('post', e.statusText)
+            }
+        })
     </script>
 </body>
