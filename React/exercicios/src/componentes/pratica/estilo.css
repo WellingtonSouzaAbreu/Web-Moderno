@@ -1,0 +1,45 @@
+#pagina-root{
+    height: 800px;
+}
+aside{
+    width: 260px;
+    background-color: gainsboro;
+}
+
+.logo{
+    height: 90px;
+    border: 1px solid gray;
+    font-size: 70px;
+}
+
+.user{
+    font-size: 20px;
+    height: 90px;
+    border: 1px solid grey;
+    text-align: center;
+    text-justify: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.diciplinas{
+    height: 450px;
+    border: 1px solid grey;
+    font-size: 80px;    
+}
+
+.home{
+    height: 90px;
+    font-size: 20px; 
+    border: 1px solid grey;
+    text-align: center;
+    text-justify: center;
+}
+
+.home button{
+    margin: 25px;
+    padding: 10px;
+}

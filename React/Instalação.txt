@@ -1,0 +1,10 @@
+// Instalar dependencias necessárias para um projeto react
+npm i -g create-react-app
+
+Utiliza build do webpack
+
+// Criar projeto exercicios
+create-react-app exercicios
+
+// Dentro da pasta do projeto
+// npm start
