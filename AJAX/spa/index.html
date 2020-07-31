@@ -35,7 +35,8 @@
             .then(html => {
                 elemento.innerHTML = html
                 if(push){
-                    history.pushState({seletor}, null, url) // Coloca um elemento no histórico no browser
+                    history.pushState({seletor}, null, url) // Coloca um elemento no histórico no browser // ALtera a url no topo
+                    console.log('pushState: ' + window.location.href)
                 }
             })
         }
@@ -50,8 +51,12 @@
             }
         })
 
-        window.onpopstate = e => {
+       /*  document.querySelector('.conteudo').onclick = e => {
+            history.back() // Volta
+        } */
+        window.onpopstate = e => { // Ao descer no histórico
             if(e.state){
+                console.log(`Window.Location: ${window.location.href}`)
                 navegarViaAjax(window.location.href, e.state.seletor, false)
             }
         }

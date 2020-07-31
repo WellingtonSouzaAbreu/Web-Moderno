@@ -32,7 +32,7 @@ app.post('/upload', (req, res) => {
 app.post('/formulario', (req, res) => {
     res.send({
         ...req.body, //Tudo que veio na requisição é devolvido no objeto
-        id:1
+        id: 1
     })
 })
 
@@ -46,4 +46,19 @@ app.get('/parOuImpar', (req, res) => {
         resultado: par ? 'par' : 'impar'
     })
 })
-app.listen(8000, () => console.log('Executando na porta 8000...'))
+
+app.get('/teste', (req, res) => {
+    console.log(req.query.nome)
+    res.send({
+        frase: `Meu nome é ${req.query.nome}!`
+    })
+})
+
+/* app.get('/dados/nomes.json', (req, res) => {
+    res.send({
+        nomes:  
+    })
+}) */
+
+
+app.listen(8001, () => console.log('Executando na porta 8000...'))

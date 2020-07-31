@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        // Decorator é adicionar funcionalidades sem ser por herança
+        $('div').hide(500).show(500).fadeOut(500)  //Esse seletor não retorna exatamente um arquivo da dom, e sim um decorator
+        console.log($('div').get(0))
+
+        $.fn.fundoVerde = function(){
+            this.css('background-color', 'green')
+            return this // Usada para realizar o encadeamento
+        }
+
+        $('body').fundoVerde().hide(10001) // Necessita que a função retorne this 
+    </script>
+</body>

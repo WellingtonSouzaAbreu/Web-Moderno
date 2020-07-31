@@ -1,0 +1,5 @@
+// Instalando o package.json
+npm init -y
+
+ // Instalando o Json Server
+ npm i --save json-server@0.13.0 -E

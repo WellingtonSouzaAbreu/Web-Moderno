@@ -14,23 +14,57 @@
     <div id="post"></div>
 
     <script>
-        function exibirResultado(id, dados){
+        function exibirResultado(id, dados) {
+            // window.alert(dados.resultado)
             const texto = JSON.stringify(dados)
-            document.getElementById(id).innerHTML = texto 
+            document.getElementById(id).innerHTML = texto
         }
 
         // Forma enxuta de simplificação
         //axios.get('parOuImpar?numero=1').then(resp => exibirResultado('get', resp.data))
 
-        axios.get('parOuImpar',{
+        axios.get('parOuImpar', {
             params: { // Param pode ser acessado no servidro com req.params
-                numero: 6
+                nome: 'zé'
             }
         }).then(resp => exibirResultado('get', resp.data))
 
-        axios.post('formulario', {
+        /* axios.post('formulario', {
             nome: 'João',
             sobrenome: 'Silva'
-        }).then(resp => exibirResultado('post', resp.data))
+        }).then(resp => exibirResultado('post', resp.data)) */
+
+        function mostrar(dados) {
+            // const texto = JSON.stringify(dados)
+            window.alert(dados.frase)
+        }
+
+        axios.get('teste', {
+            params: {
+                nome: 'zé'
+            }
+        }).then(resp => { /* mostrar(resp.data) */ })
+
+        axios.get('dados/nomes.json')
+            .then(nomes => mostrarNomes(nomes))
+            .catch(erro => console.log(erro))
+
+
+        function mostrarNomes(nomes) {
+            JSON.stringify(nomes)
+            // window.alert(typeof nomes)   
+            nomes.data.forEach(pessoa => {
+                document.querySelector('#get').innerHTML += `${pessoa.nome}, `
+            })
+        }
+
+        axios.get('/ajax.html')
+        .then(resp => document.querySelector('body').innerHTML += resp.data)
+        .catch(err => console.log(err))
+
+        axios.get('/index.html')
+        // .then(resp => document.querySelector('#post').innerHTML += resp.data)
+
+
     </script>
 </body>

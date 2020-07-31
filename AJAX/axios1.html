@@ -12,13 +12,21 @@
     <h1>Estados</h1>
 
     <script>
-        const url = 'dados/estados.json' //Axios realiza um parse automático, já convertido
-        axios(url).then(resp => { // Resp.data acessa os dados da requisição
+        /* const url = 'dados/estados.json' //Axios realiza um parse automático, já convertido
+        axios(url).then(resp => { // Resp.data acessa os dados da resposta
             const itens = resp.data.reduce(
                 (html, estado) => html + `<li>${estado.nome}</li>`, ''
             )
             console.log(itens)
             document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`)
+        }) */
+
+        const url = 'dados/nomes.json'
+        axios(url).then(resp => {
+            const pessoas = resp.data.reduce((html = ' ', pessoa) =>
+                html + `<li>${pessoa.id} > ${pessoa.nome} > ${pessoa.idade}</li>`, '' // Sem as '' não se pega o primeiro elemento
+            )
+            document.body.insertAdjacentHTML('beforeend', `<ul>${pessoas}</ul>`)
         })
     </script>
 </body>

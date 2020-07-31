@@ -1,0 +1,4 @@
+npm i -g gulp-cli - intalar gulp cliente direto no terminal node.js. Command Line Interface
+
+Gulp é baseado em funções chamadas tarefas ou tasks
+Tarefas são executadas em paralelo, mas podem ser postas para trabalhar em sessão sequencial
