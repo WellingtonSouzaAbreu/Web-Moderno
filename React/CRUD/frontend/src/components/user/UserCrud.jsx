@@ -140,7 +140,7 @@ export default class UserCrud extends Component {
     render() {
         return (
             <Main {...headerProps}>
-                {this.renderForm()}
+                {this.renderForm()}   {/* Essas são as props.children de main */}
                 {this.renderTable()}
             </Main>
         )

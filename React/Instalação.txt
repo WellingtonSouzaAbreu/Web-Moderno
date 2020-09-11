@@ -4,7 +4,7 @@ npm i -g create-react-app
 Utiliza build do webpack
 
 // Criar projeto exercicios
-create-react-app exercicios
+create-react-app NomeProjeto
 
 // Dentro da pasta do projeto
 // npm start

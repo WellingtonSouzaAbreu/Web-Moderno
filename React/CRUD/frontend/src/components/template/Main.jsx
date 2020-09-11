@@ -7,7 +7,7 @@ export default props =>
     <Header {...props}/> {/* Propriedades do main estão sendo propagadas para o header */}
     <main className="content container-fluid">
         <div className="p-3 mt-3">
-            {props.children}
+            {props.children} {/* Tags filhas que foram adicionadas dentro de main em UserCrud */}
         </div>
     </main>
 </React.Fragment>
